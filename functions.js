@@ -43,7 +43,7 @@ function bookCountsByAuthor(authors) {
     bookCount: author.books.length,
   }));
 }
-console.log(bookCountsByAuthor(authors));
+//console.log(bookCountsByAuthor(authors));
 
 /**************************************************************
  * booksByColor(books):
@@ -53,16 +53,14 @@ console.log(bookCountsByAuthor(authors));
  *    { <COLOR>: [<BOOK_TITLES>] }
  ****************************************************************/
 function booksByColor(books) {
-
-  let colors{
-    paint: book.color
+  const colors = {
+    paint: books.color,
   };
-  return books.map((book) => ({
-    "": book.color,
-    "": books.forEach(element => {
-      
-    }),
+
+  books.map((book) => ({
+    [book.color]: book.title,
   }));
+  return colors;
 }
 console.log(booksByColor(books));
 
